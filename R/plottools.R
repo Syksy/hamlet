@@ -557,6 +557,10 @@ hmap <- function(
 	
 	# Reorder rows and columns for the color intervals according to the respective dendrograms
 	intervalmat <- intervalmat[rev(order.row), order.col] # Notice that y-axis was reversed
+	# Also reorder the lty, lwd and border matrices in case user is annotating certain elements
+	lty <- lty[rev(order.row), order.col]
+	lwd <- lwd[rev(order.row), order.col]
+	border <- border[rev(order.row), order.col]
 	
 	# Plotting the rectangles for the heatmap itself
 	for(row in 1:nr){
