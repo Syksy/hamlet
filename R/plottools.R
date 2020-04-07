@@ -654,9 +654,9 @@ hmap.key <- function(
 	# Text size
 	cex = 0.5,
 	# Text position
-	pos = 3#,
+	pos = 3, #,
 	# Text offset in relation to ticks
-	offset = c(0,0),
+	offset = c(0,0)
 
 	# Additional parameters
 	#...
