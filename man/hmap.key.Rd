@@ -11,7 +11,7 @@ hmap.key(h, x0 = h$leftlim[1], x1 = h$leftlim[2], y0 =
                  h$toplim[1], y1 = h$toplim[2], xlim = range(h$valseq),
                  ratio = 0.5, tick = 0.1, at = seq(from =
                  min(h$valseq), to = max(h$valseq), length.out = 5),
-                 bty = "c", cex = 0.5, pos = 3)
+                 bty = "c", cex = 0.5, pos = 3, offset = c(0,0))
 }
 \arguments{
   \item{h}{
@@ -49,6 +49,9 @@ The zooming factor for plotting the text and other objects affected by the 'cex'
 }
   \item{pos}{
 The text alignment and position parameter given to the 'text' function in the key
+}
+  \item{offset}{
+Allows offsetting legend text by absolute {x,y} coordinates in relation to ticks
 }
 }
 \author{

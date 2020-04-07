@@ -655,6 +655,8 @@ hmap.key <- function(
 	cex = 0.5,
 	# Text position
 	pos = 3#,
+	# Text offset in relation to ticks
+	offset = c(0,0),
 
 	# Additional parameters
 	#...
@@ -680,7 +682,7 @@ hmap.key <- function(
 	where <- findInterval(at, vec=h$valseq)
 	where <- where[!where==0]
 	for(w in 1:length(where)){
-		text(x=xseq[where[w]], y=y0, pos=pos, labels=round(at[w],3), cex=cex) # Text labels above lower text boundary box
+		text(x=xseq[where[w]]+offset[1], y=y0+offset[2], pos=pos, labels=round(at[w],3), cex=cex) # Text labels above lower text boundary box
 		segments(x0=xseq[where[w]], x1=xseq[where[w]], y0=ymid, y1=ytick, col="black")
 	}
 	

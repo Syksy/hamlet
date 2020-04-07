@@ -1,8 +1,8 @@
 Package: hamlet
 Type: Package
 Title: Hierarchical Optimal Matching and Machine Learning Toolbox
-Version: 0.9.6-2
-Date: 2018-08-22
+Version: 0.9.6-3
+Date: 2020-04-07
 Author: Teemu Daniel Laajala <teelaa@utu.fi>
 Maintainer: Teemu Daniel Laajala <teelaa@utu.fi>
 Depends: R (>= 3.0.0)
