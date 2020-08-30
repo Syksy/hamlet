@@ -22,7 +22,7 @@ mem.plotresid <- function(fit, linear=T, type="XbZu", main, xlab, ylab){
 # Plot histogram distributions of random effects
 mem.plotran <- function(fit, breaks=100){
 	count <- 0
-	if(class(fit) %in% c("lmerMod", "mer", "merModLmerTest", "nlmerMod")){
+	if(class(fit) %in% c("lmerMod", "mer", "merModLmerTest", "nlmerMod", "lmerModLmerTest")){
 		lapply(lme4::ranef(fit), FUN=function(x) count <<- count + ncol(x))
 		par(mfrow=c(ceiling(sqrt(count)),ceiling(sqrt(count))))
 		lapply(lme4::ranef(fit), FUN=function(x) apply(x, MARGIN=2, FUN=function(y) hist(y, breaks=breaks)))
@@ -38,7 +38,7 @@ mem.plotran <- function(fit, breaks=100){
 
 # Get per-observation components Xb and Zu from a mixed-effects model
 mem.getcomp <- function(fit){
-	if(class(fit) %in% c("lmerMod", "glmerMod", "mer", "merModLmerTest")){
+	if(class(fit) %in% c("lmerMod", "glmerMod", "mer", "merModLmerTest", "lmerModLmerTest")){
 		# Xb 
 		fix <- lme4::getME(fit,'X') %*% lme4::fixef(fit)
 		# Zu
@@ -118,7 +118,7 @@ mem.powersimu <- function(
 	# Additional parameters
 	...
 ){
-	if(!class(fit) %in% c("lme4", "lmerMod", "merModLmerTest", "lmerModLmerTest")){
+	if(!class(fit) %in% c("lme4", "lmerMod", "merModLmerTest", "lmerModLmerTest", "lmerModLmerTest")){
 		stop(paste("Invalid class of fit (should be a lme4-object), given class:", class(fit)))
 	}
 	# Set random seed if desired
