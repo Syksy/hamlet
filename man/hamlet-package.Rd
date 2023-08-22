@@ -8,16 +8,6 @@ Hierarchical Optimal Matching and Machine Learning Toolbox
 \description{
 This package provides functions and algorithms for solving optimal matching tasks in the context of preclinical cancer studies. Further, various help and plotting functions are provided for unsupervised and supervised machine learning as well as longitudinal modeling of tumor growth response patterns.
 }
-\details{
-\tabular{ll}{
-Package: \tab hamlet\cr
-Type: \tab Package\cr
-Version: \tab 0.9.5-2\cr
-Date: \tab 2017-09-21\cr
-License: \tab GPL (>= 2)\cr
-}
-The package 'hamlet' offers functions for optimal matching, randomization, and mixed-effects modeling in preclinical cancer studies. The functions are divided to 'match'-prefix indicating optimal matching intended functions, 'mem' indicating mixed-effects modeling, 'mix' for mixed type (numerical and categorical) data analysis, and rest that are various plotting and helper functions for various tasks.
-}
 \author{
 Teemu Daniel Laajala
 
